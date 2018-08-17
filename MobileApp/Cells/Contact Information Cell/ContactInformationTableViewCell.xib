@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="236" id="KGk-i7-Jjw" customClass="ContactInformationTableViewCell" customModule="MobileApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="235.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UaV-es-ZJo">
+                        <rect key="frame" x="8" y="11" width="304" height="175"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="175" id="C1z-33-9ZI"/>
+                        </constraints>
+                    </mapView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MR1-7z-G4F">
+                        <rect key="frame" x="8" y="141" width="304" height="45"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yah-Sa-1Li">
+                            <rect key="frame" x="0.0" y="0.0" width="304" height="45"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mws-MB-MOP">
+                                    <rect key="frame" x="8" y="8" width="288" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhe-Ww-yTc">
+                                    <rect key="frame" x="8" y="24" width="288" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="hhe-Ww-yTc" firstAttribute="top" secondItem="mws-MB-MOP" secondAttribute="bottom" id="HLx-F5-ZYu"/>
+                                <constraint firstItem="mws-MB-MOP" firstAttribute="leading" secondItem="yah-Sa-1Li" secondAttribute="leading" constant="8" id="KdB-tb-QeA"/>
+                                <constraint firstAttribute="trailing" secondItem="mws-MB-MOP" secondAttribute="trailing" constant="8" id="OQB-Wc-Tk6"/>
+                                <constraint firstItem="hhe-Ww-yTc" firstAttribute="leading" secondItem="yah-Sa-1Li" secondAttribute="leading" constant="8" id="RlN-7o-fbF"/>
+                                <constraint firstAttribute="trailing" secondItem="hhe-Ww-yTc" secondAttribute="trailing" constant="8" id="Y9I-nL-Qqx"/>
+                                <constraint firstItem="hhe-Ww-yTc" firstAttribute="top" secondItem="yah-Sa-1Li" secondAttribute="top" constant="24" id="eRF-U1-Nhq"/>
+                                <constraint firstAttribute="bottom" secondItem="hhe-Ww-yTc" secondAttribute="bottom" id="fbh-Fb-5Se"/>
+                                <constraint firstItem="mws-MB-MOP" firstAttribute="top" secondItem="yah-Sa-1Li" secondAttribute="top" constant="8" id="n4Z-Wr-lCo"/>
+                            </constraints>
+                        </view>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="v5j-J0-giI"/>
+                        </constraints>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmz-Es-6IE">
+                        <rect key="frame" x="8" y="194" width="304" height="30"/>
+                        <state key="normal" title="Get Directions!"/>
+                        <connections>
+                            <action selector="didTapGetDirections:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KTl-8i-AiF"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MR1-7z-G4F" firstAttribute="leading" secondItem="UaV-es-ZJo" secondAttribute="leading" id="5uU-YF-kbK"/>
+                    <constraint firstItem="Cmz-Es-6IE" firstAttribute="top" secondItem="UaV-es-ZJo" secondAttribute="bottom" constant="8" id="93H-CP-Sp6"/>
+                    <constraint firstItem="Cmz-Es-6IE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="CZ9-qS-NsV"/>
+                    <constraint firstAttribute="trailing" secondItem="Cmz-Es-6IE" secondAttribute="trailing" constant="8" id="If6-36-8Kw"/>
+                    <constraint firstAttribute="trailing" secondItem="UaV-es-ZJo" secondAttribute="trailing" constant="8" id="VZk-n3-qdN"/>
+                    <constraint firstItem="UaV-es-ZJo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="bre-C0-6Rk"/>
+                    <constraint firstAttribute="bottom" secondItem="Cmz-Es-6IE" secondAttribute="bottom" constant="11.5" id="eMW-FV-vuA"/>
+                    <constraint firstItem="MR1-7z-G4F" firstAttribute="trailing" secondItem="UaV-es-ZJo" secondAttribute="trailing" id="hGv-05-CaF"/>
+                    <constraint firstItem="MR1-7z-G4F" firstAttribute="bottom" secondItem="UaV-es-ZJo" secondAttribute="bottom" id="mzK-gc-dAf"/>
+                    <constraint firstItem="MR1-7z-G4F" firstAttribute="width" secondItem="UaV-es-ZJo" secondAttribute="width" id="ueY-IH-Hlb"/>
+                    <constraint firstItem="UaV-es-ZJo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="zMk-bB-spz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabelLine1" destination="mws-MB-MOP" id="8lF-rq-7Rq"/>
+                <outlet property="addressLabelLine2" destination="hhe-Ww-yTc" id="apq-je-4qc"/>
+                <outlet property="mapView" destination="UaV-es-ZJo" id="xtr-LB-obz"/>
+            </connections>
+            <point key="canvasLocation" x="-6" y="41"/>
+        </tableViewCell>
+    </objects>
+</document>
